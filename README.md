@@ -17,7 +17,8 @@ the a sprite inside a 512 by 512 area like this:
 If the sprite bumps into any of the containing object's boundaries,
 the `contain` function will return a value that tells you which side
 the sprite bumped into: “left”, “top”, “right” or “bottom”. Here's how
-you could keep the sprite contained and also find out which boundary it hit
+you could keep the sprite contained and also find out which boundary
+it hit:
 ```js
 //Contain the sprite and find the collision value
 let collision = contain(anySprite, {x: 0, y: 0, width: 512, height: 512});
@@ -30,5 +31,5 @@ if(collision) {
   if collision.has("bottom") console.log("The sprite hit the bottom");  
 }
 ```
-If there's the sprite that doesn't hit a boundary, the value of
+If the sprite doesn't hit a boundary, the value of
 `collision` will be `undefined`. 
